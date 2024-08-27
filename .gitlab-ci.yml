@@ -1,0 +1,1 @@
+include: 'https://raw.githubusercontent.com/blindspot-security/myrror-cli/main/templates/gitlab/myrror-cli.gitlab-ci.yml'
