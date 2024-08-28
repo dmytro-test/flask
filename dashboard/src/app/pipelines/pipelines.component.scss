@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .content {
+    display: flex;
+    flex-direction: column;
+    .pipeline-container {
+      width: 500px;
+      margin-bottom: 3px;
+    }
+  }
+}

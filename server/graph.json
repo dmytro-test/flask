@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "name": "net.schmizz.sshj.SocketClient: void clinit()",
+      "id": 0,
+      "group": 2
+    },
+    {
+      "name": "net.schmizz.sshj.SocketClient: boolean isConnected()",
+      "id": 1,
+      "group": 2
+    },
+    {
+      "name": "net.schmizz.sshj.common.Base64$OutputStream: void close()",
+      "id": 2,
+      "group": 1
+    },
+    {
+      "name": "net.schmizz.sshj.connection.channel.ChannelOutputStream: void close()",
+      "id": 3,
+      "group": 1
+    },
+    {
+      "name": "net.schmizz.sshj.sftp.RemoteFile$RemoteFileOutputStream: void close()",
+      "id": 4,
+      "group": 1
+    },
+    {
+      "name": "net.schmizz.sshj.SSHClient: boolean isConnected()",
+      "id": 5,
+      "group": 1
+    }
+  ],
+  "buildId": "1392028242",
+  "links": [
+    {
+      "source": "net.schmizz.sshj.SocketClient: void clinit()",
+      "value": 2,
+      "target": "net.schmizz.sshj.SocketClient: void clinit()"
+    },
+    {
+      "source": "net.schmizz.sshj.SocketClient: boolean isConnected()",
+      "value": 2,
+      "target": "net.schmizz.sshj.SocketClient: void clinit()"
+    },
+    {
+      "source": "net.schmizz.sshj.common.Base64$OutputStream: void close()",
+      "value": 1,
+      "target": "net.schmizz.sshj.SocketClient: boolean isConnected()"
+    },
+    {
+      "source": "net.schmizz.sshj.connection.channel.ChannelOutputStream: void close()",
+      "value": 1,
+      "target": "net.schmizz.sshj.SocketClient: boolean isConnected()"
+    },
+    {
+      "source": "net.schmizz.sshj.sftp.RemoteFile$RemoteFileOutputStream: void close()",
+      "value": 1,
+      "target": "net.schmizz.sshj.SocketClient: boolean isConnected()"
+    },
+    {
+      "source": "net.schmizz.sshj.SSHClient: boolean isConnected()",
+      "value": 1,
+      "target": "net.schmizz.sshj.SocketClient: boolean isConnected()"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "pipelines": [
+    { "id": "1", "title": "Run1 (Pipline 1392012469)", "description": "Build Integrity Verified", "status": "GOOD" },
+    { "id": "2", "title": "Run2 (Pipeline 1392028242)", "description": "Build Integrity Failed", "status": "BAD" }
+  ],
+  "pipelines-details": {
+    "1": {
+      "description": "https://github.com/bl1ndsp0t/sshj/actions/runs/1392012469",
+      "nodes": [],
+      "links": []
+    },
+    "2": {
+      "description": "Blindspot Has detected tampering of SSHClient Class in isConnected() Function",
+      "nodes": [
+        {
+          "id": "0",
+          "name": "SocketClient: void clinit()",
+          "nodeType": "ROOT",
+          "riskType": "NORMAL"
+        },
+        {
+          "id": "1",
+          "name": "SocketClient: boolean isConnected()",
+          "nodeType": "METHOD",
+          "riskType": "CHECK"
+        },
+        {
+          "id": "2",
+          "name": "common.Base64$OutputStream: void close()",
+          "nodeType": "METHOD",
+          "riskType": "CHECK"
+        },
+        {
+          "id": "3",
+          "name": "connection.channel.ChannelOutputStream: void close()",
+          "nodeType": "METHOD",
+          "riskType": "NORMAL"
+        },
+        {
+          "id": "4",
+          "name": "sftp.RemoteFile$RemoteFileOutputStream: void close()",
+          "nodeType": "METHOD",
+          "riskType": "NORMAL"
+        },
+        {
+          "id": "5",
+          "name": "SSHClient: boolean isConnected()",
+          "nodeType": "ACTION",
+          "riskType": "SUSPICIOUS"
+        }
+      ],
+      "links": [
+        {
+          "source": "0",
+          "type": "NORMAL",
+          "target": "1"
+        },
+        {
+          "source": "1",
+          "type": "NORMAL",
+          "target": "2"
+        },
+        {
+          "source": "3",
+          "type": "NORMAL",
+          "target": "0"
+        },
+        {
+          "source": "4",
+          "type": "NORMAL",
+          "target": "3"
+        },
+        {
+          "source": "2",
+          "type": "SUSPICIOUS",
+          "target": "5"
+        }
+      ]
+    }
+  }
+}
