@@ -1,0 +1,12 @@
+<div class="container" (click)="pipelineClicked.emit(id)">
+  <mat-card [ngClass]="{ 'bad-status': status === 'BAD', 'good-status': status === 'GOOD' }">
+    <div class="content">
+      <div class="title">
+        {{ title | titlecase }}
+      </div>
+      <div class="description">
+        {{ description }}
+      </div>
+    </div>
+  </mat-card>
+</div>

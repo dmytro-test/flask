@@ -1,0 +1,15 @@
+<div class="container" *ngIf="nodes?.length > 0 && links?.length > 0">
+  <div class="content">
+    <div class="graph-container">
+      <app-graph class="pipeline-graph" [nodes]="nodes" [links]="links"></app-graph>
+    </div>
+    <div class="description-container">
+      <div class="description-content">
+        <p>
+          {{ description }}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>

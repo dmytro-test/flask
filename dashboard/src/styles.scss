@@ -1,0 +1,26 @@
+@import '../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$blindspot-app-primary: mat-palette($mat-indigo);
+$blindspot-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$blindspot-app-warn: mat-palette($mat-red);
+$blindspot-app-theme: mat-light-theme(
+  (
+    color: (
+      primary: $blindspot-app-primary,
+      accent: $blindspot-app-accent,
+      warn: $blindspot-app-warn
+    )
+  )
+);
+
+@include angular-material-theme($blindspot-app-theme);
+
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+.bad-status{
+}

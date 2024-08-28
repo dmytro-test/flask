@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="content">
+    <ng-container *ngFor="let pipeline of pipelines$ | async">
+      <div class="pipeline-container">
+        <app-pipeline-card
+          class="pipeline-card"
+          [id]="pipeline.id"
+          [title]="pipeline.title"
+          [status]="pipeline.status"
+          [description]="pipeline.description"
+          (pipelineClicked)="pipelineClicked($event)"
+        ></app-pipeline-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

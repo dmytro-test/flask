@@ -1,0 +1,29 @@
+:host {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  background-image: url('successfulBuild.png');
+  background-position: 0rem;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding-left: 35px;
+  .title {
+    margin-right: 15px;
+    font-size:20px;
+    text-transform: lowercase;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+.bad-status {
+  .content {
+    background-image: url('failedBuild.png');
+  }
+}
